@@ -9,7 +9,7 @@ Contact: zade.akras@yale.edu
 By default the pressure level should come first in the pair, though this can be changed by switching the 0 and 1 in line 26 (in the pressure\_grid.update statement).
 
 - A .dat file ('Tp\_2014dec11\_results.dat') containg the temperature values for each latitude/longitude/pressure triplet.
-The file string can be modified at line 30 if needed. The script is designed to handle the output of /home/zakras/projects/texes\_vs\_time/idl/output\_txt\_texes\_temperatures\_2014dec11.pro, which gives a .dat file with a latitude in column 1, a longitude in column 2, followed by a series of temperature values in column 1 and the corresponding error in column 2. The script is written to ignore the errors, so those aren't necessary. Each latitude/longitude pair has np many values (np = number of pressure levels), with the ith value corresponding to the temperature at the ith pressure level.
+The file string can be modified at line 30 if needed. The script is designed to handle the output of /home/zakras/projects/texes\_vs\_time/idl/output\_txt\_texes\_temperatures\_2014dec11.pro, which gives a .dat file with a latitude in column 1, a longitude in column 2, followed by a series of temperature values in column 1 and the corresponding error in column 2. The script is written to ignore the errors, so those aren't necessary. Each latitude/longitude pair has np many values (np = number of pressure levels), with the ith value corresponding to the temperature at the ith pressure level. After np many rows comes the next latitude/longitude pair.
 
 ## Usage
 
