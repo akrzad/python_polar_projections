@@ -17,6 +17,6 @@ Before running the script, a handful of variables need to be changed immediately
 
 The script outputs two files. The default is two .png files (one for North, one for South) titled "date\_N.png" for North and "date\_S.png" for South. These can be changed at lines 210 and 268, in the plt.savefig commands.
 
-The default colormap is 'inferno.' I found this colormap to use colors intuitive to heat and should be legible in black and white. The colormap can be changed in the contourf statements, such as in line 191.
+The default colormap is 'inferno.' I found this colormap to use colors intuitive to heat, and it should work in black and white. The colormap can be changed in the contourf statements, such as in line 191.
 
 The number of contour levels for the South is set to a default value of 20, since this was close to the maximum for the 2014dec11 data before the contourf function started breaking. For some dates this will be too high, and for others you will be able to go higher. This number can be adjusted in line 247, as the fourth parameter of the contourf function. To set it at the same number of contour levels as the North (this almost certainly won't work), use contour\_levels in place of a number. If you get an error, it's probably because there were too many contour levels for the South. The North output should be unaffected.
