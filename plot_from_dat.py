@@ -15,7 +15,7 @@ i_p = 79 #PRESSURE LEVEL
 contour_lines = False #True displays contour lines
 contour_levels = 255 #recommend < 30 if contour_lines == True
 show_gridlines = True #True displays gridlines
-labels_bool = False #True displays gridline labels
+show_labels = False #True displays gridline labels
 gridline_style = '-' # '-' for solid lines, '--' for dashed lines
 
 
@@ -193,9 +193,9 @@ cs=ax.contourf(north_longitudes, north_latitudes, north_array, contour_levels, t
 ax.invert_yaxis() #reflect plot vertically
 
 if show_gridlines == True:
-    gl = ax.gridlines(draw_labels=labels_bool, color='gray', linestyle=gridline_style, y_inline=True,x_inline=True)
+    gl = ax.gridlines(draw_labels=show_labels, color='gray', linestyle=gridline_style, y_inline=True,x_inline=True)
 #x_inline True for inside, False for outside (outside is buggy)
-    if labels_bool == True:
+    if show_labels == True:
         gl.xlocator=mticker.FixedLocator([-120,-60,0,60,120,179.9]) #180 doesn't display but 179.9 rounds up
     else:
         gl.xlocator=mticker.FixedLocator([-120,-60,0,60,120,180])
@@ -248,10 +248,10 @@ cs=ax.contourf(south_longitudes, south_latitudes, south_array, 20, transform=ccr
 #for South, contourf breaks above certain contour levels, depending on the date
 
 ax.invert_yaxis() #reflect plot vertically
-gl = ax.gridlines(draw_labels=labels_bool, color='gray', linestyle=gridline_style, y_inline=True,x_inline=True)
+gl = ax.gridlines(draw_labels=show_labels, color='gray', linestyle=gridline_style, y_inline=True,x_inline=True)
 #x_inline True for inside, False for outside (outside is buggy)
 
-if labels_bool == True:
+if show_labels == True:
     gl.xlocator=mticker.FixedLocator([-120,-60,0,60,120,179.9]) #180 doesn't display but 179.9 rounds up
 else:
     gl.xlocator=mticker.FixedLocator([-120,-60,0,60,120,180])
