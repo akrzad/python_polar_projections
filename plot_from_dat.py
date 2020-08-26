@@ -132,7 +132,7 @@ for triplet in pressure_temps:
         south_longitudes.append(triplet[1])
 
 
-#CREATE NORTH NUMPY ARRAYS FOR NORTH AND SOUTH
+#CREATE NUMPY ARRAYS FOR NORTH AND SOUTH
 north_array = np.zeros((len(north_latitudes),len(north_longitudes)))
 for lat in range(0,len(north_latitudes)):
     for lon in range(0,len(north_longitudes)):
